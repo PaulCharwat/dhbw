@@ -18,7 +18,7 @@ public class Calculator {
 		this.modell = modell;
 		taschenrechnerAnzahl++;
 	}
-
+// hi
 	public Calculator(String seriennummer, String modell, String besitzer) {
 		this(seriennummer, modell);
 		this.besitzer = besitzer;
