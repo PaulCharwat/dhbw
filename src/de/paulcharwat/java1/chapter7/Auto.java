@@ -10,6 +10,9 @@ public class Auto {
     public static void main(String[] args) {
         Auto a1 = new Auto("FFB CP 811", "Auto");
         a1.einsteigen(1);
+        a1.einsteigen(3);
+        a1.aussteigen(2);
+        a1.verbrauche(9);
         a1.tanken(10);
         Auto a2 = new Auto("M AC 457", "Auto");
         a2.einsteigen(2);
@@ -38,7 +41,9 @@ public class Auto {
     }
 
     public int einsteigen(int insassen) {
-        return this.insassenAnzahl += insassen;
+        this.insassenAnzahl = this.insassenAnzahl + insassen;
+        return this.insassenAnzahl;
+        //return this.insassenAnzahl += insassen;
     }
 
     public int aussteigen(int insassen) {
