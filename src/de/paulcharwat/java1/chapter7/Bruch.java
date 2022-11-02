@@ -5,7 +5,21 @@ public class Bruch {
     public final long nenner;
 
     public static void main(String[] args) {
-        
+        System.out.println(new Bruch (1,3).toString());
+        System.out.println(new Bruch (2,4).toString());
+        System.out.println(new Bruch (-2,3).toString());
+        System.out.println(new Bruch (2,-3).toString());
+        System.out.println(new Bruch (-2,-3).toString());
+        System.out.println(new Bruch (1,3).negiere().toString());
+        System.out.println(new Bruch (1,3).addiere(new Bruch(1,2)).toString());
+        System.out.println(new Bruch (3,4).subtrahiere(new Bruch(5,6)).toString());
+        System.out.println(new Bruch (2,3).kehrwert().toString());
+        System.out.println(new Bruch (2,3).multipliziere(new Bruch(6,8)).toString());
+        System.out.println(new Bruch (3,4).dividiere(new Bruch(5,6)).toString());
+        System.out.println(new Bruch (4,6).potenziere(3).toString());
+        System.out.println(new Bruch (1,2).istGleich(new Bruch(3,4)));
+        System.out.println(new Bruch (3,4).istGleich(new Bruch(6,8)));
+        System.out.println(new Bruch (3,4).alsDouble());
     }
 
     public Bruch(long zaehler, long nenner) {
