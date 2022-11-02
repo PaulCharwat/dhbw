@@ -7,6 +7,7 @@ public class Calculator {
 	public String seriennummer;
 	public String modell;
 	public String besitzer;
+
 	public static void main(String[] args) {
 		Calculator c1 = new Calculator("AT24-203.963", "AT24", "Ich");
 		c1.druckeDaten();
@@ -17,6 +18,7 @@ public class Calculator {
 		this.modell = modell;
 		taschenrechnerAnzahl++;
 	}
+
 	public Calculator(String seriennummer, String modell, String besitzer) {
 		this(seriennummer, modell);
 		this.besitzer = besitzer;
@@ -31,8 +33,6 @@ public class Calculator {
 		System.out.println("Modell: " + modell);
 		System.out.println("Besitzer: " + besitzer);
 	}
-
-
 
 	public static boolean isEven(long n) {
 		return n % 2 == 0;
@@ -122,6 +122,16 @@ public class Calculator {
 	}
 
 	public static int ggT(int x, int y) {
+		if (x == y) {
+			return x;
+		}
+		if (x > y) {
+			return ggT(x - y, y);
+		}
+		return ggT(x, y - x);
+	}
+
+	public static long ggT(long x, long y) {
 		if (x == y) {
 			return x;
 		}

@@ -20,6 +20,7 @@ public class Bruch {
         System.out.println(new Bruch (1,2).istGleich(new Bruch(3,4)));
         System.out.println(new Bruch (3,4).istGleich(new Bruch(6,8)));
         System.out.println(new Bruch (3,4).alsDouble());
+        System.out.println(kuerzen(new Bruch(64, 216)));
     }
 
     public Bruch(long zaehler, long nenner) {
@@ -66,4 +67,13 @@ public class Bruch {
     public String toString() {
         return this.zaehler + "/" + this.nenner;
     }
+
+    public static Bruch kuerzen(Bruch bruch) {
+        long zaehler = bruch.zaehler;
+        long nenner = bruch.nenner;
+        long teiler = Calculator.ggT(zaehler, nenner);
+        return new Bruch(zaehler / teiler, nenner / teiler);
+    }
+
+
 }
