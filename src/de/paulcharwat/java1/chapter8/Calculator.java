@@ -7,7 +7,7 @@ public class Calculator {
 	private String seriennummer;
 	private String modell;
 	private String besitzer;
-	private boolean funktionsfaehig;
+	private Boolean funktionsfaehig;
 
 	public String getSeriennummer() {
 		return seriennummer;
@@ -25,19 +25,15 @@ public class Calculator {
 		this.besitzer = besitzer;
 	}
 
-	public boolean isFunktionsfaehig() {
+	public Boolean getFunktionsfaehig() {
 		return funktionsfaehig;
 	}
 
-	public void setFunktionsfaehig(boolean funktionsfaehig) {
+	public void setFunktionsfaehig(Boolean funktionsfaehig) {
 		this.funktionsfaehig = funktionsfaehig;
 	}
 
 	public static void main(String[] args) {
-	}
-
-	private Calculator() {
-
 	}
 
 	public Calculator(String seriennummer, String modell) {
