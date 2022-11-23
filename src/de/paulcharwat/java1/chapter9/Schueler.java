@@ -1,13 +1,11 @@
-package de.paulcharwat.java1.chapter8;
+package de.paulcharwat.java1.chapter9;
 
 public class Schueler extends Person {
     private String schuelernummer;
     private String klasse;
 
     public Schueler(String vorname, String nachname, int geburtsjahr, String schuelernummer, String klasse) {
-        setVorname(vorname);
-        setNachname(nachname);
-        setGeburtsjahr(geburtsjahr);
+        super(vorname, nachname, geburtsjahr);      // eigener Superkonstruktor-Aufruf
         this.schuelernummer = schuelernummer;
         this.klasse = klasse;
     }

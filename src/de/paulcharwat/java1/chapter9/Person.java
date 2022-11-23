@@ -1,4 +1,4 @@
-package de.paulcharwat.java1.chapter8;
+package de.paulcharwat.java1.chapter9;
 
 public class Person {
     private String vorname;
@@ -9,7 +9,7 @@ public class Person {
 
     }
 
-    public Person(String vorname, String nachname, int geburtsjahr) {
+    protected Person(String vorname, String nachname, int geburtsjahr) {
         this.vorname = vorname;
         this.nachname = nachname;
         this.geburtsjahr = geburtsjahr;
