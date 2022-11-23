@@ -30,6 +30,7 @@ public class Schueler extends Person implements TaschenrechnerBesitzer {
         return super.toString() + ", Schülernummer: " + schuelernummer + ", Klasse: " + klasse;
     }
 
+    @Override
     public boolean equals(Object that) {
         if (that == this) { // ist das Objekt dasselbe wie dieser Schüler, dann gleichen sich beide
             return true;
@@ -44,10 +45,12 @@ public class Schueler extends Person implements TaschenrechnerBesitzer {
                 Objects.equals(klasse, schueler.klasse);
     }
 
+    @Override
     public int hashCode() {
         return 31 * super.hashCode() + Objects.hash(schuelernummer, klasse);
     }
 
+    @Override
     public String getId() {
         return "S-" + getSchuelernummer();
     }

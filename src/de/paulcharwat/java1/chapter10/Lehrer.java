@@ -40,10 +40,12 @@ public class Lehrer extends Person implements TaschenrechnerBesitzer {
         return anrede + " " + getNachname();
     }
 
+    @Override
     public String toString() { // benutzt die toString()-Methode der Superklasse
         return super.toString() + ", Personalnummer: " + personalnummer + ", Gehalt: " + gehalt;
     }
 
+    @Override
     public boolean equals(Object that) {
         if (that == this) { // ist das Objekt dasselbe wie dieser Lehrer, dann gleichen sich beide
             return true;
@@ -59,10 +61,12 @@ public class Lehrer extends Person implements TaschenrechnerBesitzer {
                 Objects.equals(anrede, lehrer.anrede);
     }
 
+    @Override
     public int hashCode() {
         return 31 * super.hashCode() + Objects.hash(personalnummer, gehalt, anrede);
     }
 
+    @Override
     public String getId() {
         return "L-" + getPersonalnummer();
     }
