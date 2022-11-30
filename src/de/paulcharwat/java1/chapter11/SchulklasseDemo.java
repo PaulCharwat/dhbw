@@ -9,17 +9,17 @@ public class SchulklasseDemo {
         
         Schulklasse klasse = new Schulklasse("5a");
 
-        klasse.toString();
+        System.out.println(klasse.toString());
         klasse.fuegeHinzu(m);
-        klasse.toString();
+        System.out.println(klasse.toString());
         klasse.fuegeHinzu(a);
-        klasse.toString();
+        System.out.println(klasse.toString());
         klasse.fuegeHinzu(b);
-        klasse.toString();
+        System.out.println(klasse.toString());
         klasse.fuegeHinzu(c);
-        klasse.toString();
+        System.out.println(klasse.toString());
 
         klasse.entferne(a);
-        klasse.toString();
+        System.out.println(klasse.toString());
     }
 }
